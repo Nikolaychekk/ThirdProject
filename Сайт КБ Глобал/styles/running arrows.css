@@ -1,0 +1,210 @@
+#block2 .section2 .leftpart {
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+/*Направление влево*/
+.arrow-6 {
+    margin: 15px 250px 0 60px;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+
+}
+
+.arrow-6 span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #7f2d60;
+    border-right: 5px solid #532541;
+    transform: rotate(45deg);
+    animation: arrow-6 2s infinite;
+}
+
+.arrow-6 span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow-6 span:nth-child(1) {
+    animation-delay: -0.4s;
+}
+
+
+@keyframes arrow-6 {
+    0% {
+        opacity: 0;
+        transform: translate(20px, 0) rotate(135deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-20px, 0) rotate(135deg);
+    }
+}
+
+/*Направление влево*/
+
+/*Текст*/
+.section2 .text {
+    position: relative;
+    display: block;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 28px;
+    color: #090909;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 15px;
+}
+
+@keyframes pulse {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Текст*/
+
+/*Направление вправо*/
+#block2 .section2 .rightpart {
+    position: relative;
+    display: flex;
+
+}
+
+.arrow-7 {
+    margin: 15px 60px 0 250px;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+}
+
+.arrow-7 span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #7f2d60;
+    border-right: 5px solid #532541;
+    transform: rotate(45deg);
+    animation: arrow-7 2s infinite;
+}
+
+.arrow-7 span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow-7 span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+
+@keyframes arrow-7 {
+    0% {
+        opacity: 0;
+        transform: translate(-20px, 0) rotate(-45deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(20px, 0) rotate(-45deg);
+    }
+}
+
+/*Направление вправо*/
+@media (max-width: 1280px) {
+
+    .arrow-6 {
+        margin: 15px 150px 0 60px;
+        width: 100px;
+        height: 100px;
+        display: inline-flex;
+
+    }
+
+    .arrow-7 {
+        margin: 15px 60px 0 150px;
+        width: 100px;
+        height: 100px;
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .arrow-6 {
+        margin: 15px 70px 0 60px;
+        width: 100px;
+        height: 100px;
+        display: inline-flex;
+
+    }
+
+    .arrow-7 {
+        margin: 15px 60px 0 70px;
+        width: 100px;
+        height: 100px;
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .arrow-6 {
+        margin: 22px 20px 0 30px;
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+
+    }
+
+    .arrow-6 span {
+
+        width: 15px;
+        height: 15px;
+
+    }
+
+    .arrow-7 {
+        margin: 22px 30px 0 20px;
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+    }
+
+    .arrow-7 span {
+
+        width: 15px;
+        height: 15px;
+
+    }
+
+    .section2 .text {
+        position: relative;
+        display: block;
+        font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+        font-size: 17px;
+        color: #090909;
+        text-transform: uppercase;
+        white-space: nowrap;
+        opacity: .25;
+        animation: pulse 2s linear alternate infinite;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 20px 15px;
+
+    }
+}

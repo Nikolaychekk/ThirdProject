@@ -1,0 +1,110 @@
+#block6 .section1 {
+
+    font-family: monospace;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: linear-gradient(to right top, rgb(0, 255, 166), rgb(0, 225, 255));
+}
+
+#block6 #toggle {
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+
+}
+
+
+#block6 #toggle:checked~dialog {
+    display: block;
+}
+
+
+
+#block6 label {
+
+    background: skyblue;
+    color: white;
+    padding: 1rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 4px 4px 13px 4px;
+
+}
+
+#open {
+    position: relative;
+    right: 220px;
+    top: 178px;
+}
+
+#block6 p {
+    padding-bottom: 40px;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+#block6 dialog {
+    animation: appear 350ms ease-in 1;
+    width: 600px;
+    height: 460px;
+    margin: 0 auto;
+    padding: 20px 20px 20px;
+    border-radius: 10px;
+}
+
+#block6 dialog::backdrop {
+    width: 200px;
+    background-color: yellow;
+}
+
+#block6 label:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 4px 4px 13px 4px skyblue;
+}
+
+@media (max-width: 1024px) {
+    #block6 .section1 {
+        font-size: 16px;
+        height: 600px;
+    }
+
+    #block6 dialog {
+        width: 250px;
+        height: 330px;
+    }
+
+    #open {
+        position: relative;
+        right: 75px;
+        top: 120px;
+    }
+}
+
+@media (max-width: 500px) {
+    #block6 .section1 {
+        font-size: 10px;
+    }
+
+    #block6 dialog {
+        width: 200px;
+        height: 210px;
+    }
+
+    #open {
+        position: relative;
+        right: 60px;
+        top: 65px;
+    }
+}

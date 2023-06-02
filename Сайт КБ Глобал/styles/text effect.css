@@ -1,0 +1,130 @@
+#block1 .b3 {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 20px;
+}
+
+#block1 .d3,
+#block1 .d4,
+#block1 .d5 {
+    border: 2px solid black;
+    min-width: 100px;
+    height: 55px;
+    position: relative;
+    margin: -9px 50px;
+    background-color: rgb(132, 49, 5);
+    text-align: center;
+}
+
+@media (max-width: 1600px) {
+
+    #block1 .d3,
+    #block1 .d4,
+    #block1 .d5 {
+        margin: -9px 40px;
+    }
+}
+
+@media (max-width: 1366px) {
+
+    #block1 .d3,
+    #block1 .d4,
+    #block1 .d5 {
+        margin: -9px 30px;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    #block1 .d3,
+    #block1 .d4,
+    #block1 .d5 {
+        margin: 0px 15px;
+        min-width: 60px;
+        height: 40px;
+        font: 17px Arial;
+
+    }
+
+    #block1 a {
+        padding: -4 0 0 0;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #block1 .b3 {
+        top: 100px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    #block1 .d3,
+    #block1 .d4,
+    #block1 .d5 {
+        min-width: 100px;
+        height: 55px;
+        font: 30px Arial;
+
+    }
+
+    #block1 a {
+        padding: -4 0 0 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #block1 .d3,
+    #block1 .d4,
+    #block1 .d5 {
+        min-width: 60px;
+        height: 40px;
+        font: 15px Arial;
+
+    }
+
+    #block1 a {
+        padding: -4 0 0 0;
+    }
+}
+
+
+#block1 .effect {
+    background-image: linear-gradient(to right,
+            #27f858,
+            #27f858 50%,
+            #ffffff 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 9px 0 0 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#block1 .effect:before {
+    content: '';
+    background: #27f858;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+#block1 a:hover {
+    background-position: 0;
+}
+
+#block1 a:hover::before {
+    width: 100%;
+}

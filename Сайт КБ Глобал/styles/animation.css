@@ -1,0 +1,260 @@
+#block5 .section1,
+#block5 .section2,
+#block5 .section3 {
+    padding: 400px 50px 400px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#block5 p {
+    position: absolute;
+    left: -80px;
+    top: -80px;
+    font-size: 22px;
+}
+
+#block5 input {
+    opacity: 0;
+}
+
+#block5 #text1,
+#block5 #text2,
+#block5 #text3 {
+    position: absolute;
+    width: 200px;
+    opacity: 0;
+    transition: all 1s 2s;
+    z-index: -2;
+}
+
+#block5 #box1:checked~#text1,
+#block5 #box2:checked~#text2,
+#block5 #box3:checked~#text3 {
+    opacity: 1;
+    z-index: 1;
+}
+
+#box1:not(:checked)~#text1,
+#box2:not(:checked)~#text2,
+#box3:not(:checked)~#text3 {
+    animation: anime-reverse 3s forwards;
+    transition: none;
+}
+
+
+#block5 .box1,
+#block5 .box2,
+#block5 .box3 {
+
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #80E7FF;
+    cursor: pointer;
+    box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff,
+        10px 10px 10px #cccccc inset,
+        -10px -10px 10px #ffffff inset;
+    animation: none;
+}
+
+
+
+#box1:checked+.label1 .box1,
+#box2:checked+.label2 .box2,
+#box3:checked+.label3 .box3 {
+    animation: anime 3s forwards;
+    transform-origin: center center;
+
+}
+
+
+
+@keyframes anime {
+    0% {
+        width: 60px;
+        height: 60px;
+        background-color: #80E7FF;
+        box-shadow: 0 0 0 #cccccc,
+            0 0 0 #ffffff,
+            10px 10px 10px #cccccc inset,
+            -10px -10px 10px #ffffff inset;
+    }
+
+    25% {
+        width: 60px;
+        height: 60px;
+        background-color: #80E7FF;
+        box-shadow: 10px 10px 10px #cccccc,
+            10px 10px 10px #ffffff,
+            0 0 0 #cccccc inset,
+            0 0 0 #ffffff inset;
+
+    }
+
+    50% {
+        width: 60px;
+        height: 240px;
+        background-color: #FFB100;
+        box-shadow: 10px 10px 10px #ffffff,
+            10px 10px 10px #ffffff,
+            0 0 0 #ffffff inset,
+            0 0 0 #ffffff inset;
+        transform-origin: center center;
+    }
+
+    79% {
+        background-color: #fc6754;
+    }
+
+    100% {
+        width: 440px;
+        height: 240px;
+        background-color: #FF1E00;
+        box-shadow: 40px 40px 40px #cccccc,
+            0 0 0 #ffffff,
+            0 0 0 #cccccc inset,
+            2px 2px 2px #ffffff inset;
+    }
+}
+
+#box1:not(:checked)+.label1 .box1,
+#box2:not(:checked)+.label2 .box2,
+#box3:not(:checked)+.label3 .box3 {
+    animation: anime-reverse 3s forwards;
+
+}
+
+@keyframes anime-reverse {
+    0% {
+        width: 440px;
+        height: 240px;
+        background-color: #FF1E00;
+        box-shadow: 40px 40px 40px #cccccc, 0 0 0 #ffffff, 0 0 0 #cccccc inset, 2px 2px 2px #ffffff inset;
+    }
+
+    21% {
+        background-color: #fc6754;
+    }
+
+    50% {
+        width: 60px;
+        height: 240px;
+        background-color: #FFB100;
+        box-shadow: 10px 10px 10px #ffffff, 10px 10px 10px #ffffff, 0 0 0 #ffffff inset, 0 0 0 #ffffff inset;
+    }
+
+    75% {
+        width: 60px;
+        height: 60px;
+        background-color: #80E7FF;
+        box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #ffffff, 0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
+    }
+
+    100% {
+        width: 60px;
+        height: 60px;
+        background-color: #80E7FF;
+        box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset, -10px -10px 10px #ffffff inset;
+    }
+}
+
+
+
+/*Первый блок*/
+
+
+
+
+/*@media (max-width: 900px) {
+
+
+    @keyframes anime {
+        0% {
+            width: 60px;
+            height: 60px;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 #cccccc,
+                0 0 0 #ffffff,
+                10px 10px 10px #cccccc inset,
+                -10px -10px 10px #ffffff inset;
+        }
+
+
+
+        25% {
+            width: 60px;
+            height: 60px;
+            background-color: #80E7FF;
+            box-shadow: 10px 10px 10px #cccccc,
+                10px 10px 10px #ffffff,
+                0 0 0 #cccccc inset,
+                0 0 0 #ffffff inset;
+        }
+
+
+
+        50% {
+            width: 60px;
+            height: 180px;
+            background-color: #FFB100;
+            box-shadow: 10px 10px 10px #ffffff,
+                10px 10px 10px #ffffff,
+                0 0 0 #ffffff inset,
+                0 0 0 #ffffff inset;
+        }
+
+
+
+        79% {
+            background-color: #fc6754;
+        }
+
+
+        100% {
+            width: 320px;
+            height: 180px;
+            background-color: #FF1E00;
+            box-shadow: 40px 40px 40px #cccccc,
+                0 0 0 #ffffff,
+                0 0 0 #cccccc inset,
+                2px 2px 2px #ffffff inset;
+        }
+
+    }
+
+    @keyframes anime-reverse {
+        0% {
+            width: 320px;
+            height: 180px;
+            background-color: #FF1E00;
+            box-shadow: 40px 40px 40px #cccccc, 0 0 0 #ffffff, 0 0 0 #cccccc inset, 2px 2px 2px #ffffff inset;
+        }
+
+        21% {
+            background-color: #fc6754;
+        }
+
+        50% {
+            width: 60px;
+            height: 180px;
+            background-color: #FFB100;
+            box-shadow: 10px 10px 10px #ffffff, 10px 10px 10px #ffffff, 0 0 0 #ffffff inset, 0 0 0 #ffffff inset;
+        }
+
+        75% {
+            width: 60px;
+            height: 60px;
+            background-color: #80E7FF;
+            box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #ffffff, 0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
+        }
+
+        100% {
+            width: 60px;
+            height: 60px;
+            background-color: #80E7FF;
+            box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset, -10px -10px 10px #ffffff inset;
+        }
+    }
+}*/
