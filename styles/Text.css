@@ -1,0 +1,413 @@
+#block7 {
+    background-color: red;
+}
+
+#block7 .p1 p {
+    columns: 5;
+    padding: 40px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+@media (max-width:900px) {
+
+    #block7 .p1 p {
+        columns: 3;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:600px) {
+
+    #block7 .p1 p {
+        columns: 2;
+
+    }
+}
+
+@media (max-width:400px) {
+
+    #block7 .p1 p {
+        columns: 1;
+
+    }
+}
+
+#block8 {
+    background: linear-gradient(-45deg, #ed19ad, #a98055, #f286e2, #1d697a);
+    background-size: 400% 400%;
+    animation: gradient1 10s ease infinite;
+}
+
+#block8 .p2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 50px;
+    text-align: justify;
+    padding-top: 200px;
+}
+
+#block8 .p2 div {
+    padding: 40px;
+}
+
+
+
+@keyframes gradient1 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#block8 .p21:hover+.p22 {
+    animation: transition 3s linear forwards;
+    position: relative;
+}
+
+
+@keyframes transition {
+    0% {
+        top: 0;
+        right: 0;
+    }
+
+    50% {
+        top: -200px;
+        right: 350px;
+    }
+
+
+
+    100% {
+        top: 0;
+        right: 570px;
+    }
+}
+
+#block8 .p21:hover~.p23 {
+    animation: transition1 3s linear forwards;
+    position: relative;
+}
+
+@keyframes transition1 {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    50% {
+        top: 200px;
+        left: 350px;
+    }
+
+
+
+    100% {
+        top: 0;
+        left: 570px;
+    }
+}
+
+@media (max-width:1600px) {
+    #block8 .p21:hover+.p22 {
+        animation: transition 3s linear forwards;
+        position: relative;
+    }
+
+
+    @keyframes transition {
+        0% {
+            top: 0;
+            right: 0;
+        }
+
+        50% {
+            top: -200px;
+            right: 300px;
+        }
+
+
+
+        100% {
+            top: 0;
+            right: 470px;
+        }
+    }
+
+    #block8 .p21:hover~.p23 {
+        animation: transition1 3s linear forwards;
+        position: relative;
+    }
+
+    @keyframes transition1 {
+        0% {
+            top: 0;
+            left: 0;
+        }
+
+        50% {
+            top: 200px;
+            left: 300px;
+        }
+
+
+
+        100% {
+            top: 0;
+            left: 470px;
+        }
+    }
+}
+
+@media (max-width:1280px) {
+    #block8 .p21:hover+.p22 {
+        animation: transition 3s linear forwards;
+        position: relative;
+    }
+
+
+    @keyframes transition {
+        0% {
+            top: 0;
+            right: 0;
+        }
+
+        50% {
+            top: -200px;
+            right: 150px;
+        }
+
+
+
+        100% {
+            top: 0;
+            right: 380px;
+        }
+    }
+
+    #block8 .p21:hover~.p23 {
+        animation: transition1 3s linear forwards;
+        position: relative;
+    }
+
+    @keyframes transition1 {
+        0% {
+            top: 0;
+            left: 0;
+        }
+
+        50% {
+            top: 200px;
+            left: 150px;
+        }
+
+
+
+        100% {
+            top: 0;
+            left: 380px;
+        }
+    }
+}
+
+@media (max-width:1150px) {
+    #block8 .p21:hover+.p22 {
+        animation: transition 3s linear forwards;
+        position: relative;
+    }
+
+
+    @keyframes transition {
+        0% {
+            top: 0;
+            right: 0;
+        }
+
+        50% {
+            top: -200px;
+            right: 150px;
+        }
+
+
+
+        100% {
+            top: 0;
+            right: 300px;
+        }
+    }
+
+    #block8 .p21:hover~.p23 {
+        animation: transition1 3s linear forwards;
+        position: relative;
+    }
+
+    @keyframes transition1 {
+        0% {
+            top: 0;
+            left: 0;
+        }
+
+        50% {
+            top: 200px;
+            left: 150px;
+        }
+
+
+
+        100% {
+            top: 0;
+            left: 300px;
+        }
+    }
+}
+
+@media (max-width:900px) {
+
+    #block8 .p2 {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 30px;
+        text-align: justify;
+        padding-top: 50px;
+        font-size: 12;
+    }
+}
+
+@media (max-width:750px) {
+
+    #block8 .p2 {
+        display: block;
+    }
+
+    #block8 .p21:hover+.p22 {
+        animation: transition 3s linear forwards;
+        position: relative;
+    }
+
+
+    @keyframes transition {
+        0% {
+            top: 0;
+            right: 0;
+        }
+
+
+        100% {
+            top: 400px;
+            right: 0;
+        }
+    }
+
+    #block8 .p21:hover~.p23 {
+        animation: transition1 3s linear forwards;
+        position: relative;
+    }
+
+    @keyframes transition1 {
+        0% {
+            top: 0;
+            left: 0;
+        }
+
+        100% {
+            top: -400px;
+            left: 0;
+        }
+    }
+}
+
+@media (max-width:660px) {
+
+    #block8 .p2 {
+        display: block;
+    }
+
+    #block8 .p21:hover+.p22 {
+        animation: transition 3s linear forwards;
+        position: relative;
+    }
+
+
+    @keyframes transition {
+        0% {
+            top: 0;
+            right: 0;
+        }
+
+
+        100% {
+            top: 500px;
+            right: 0;
+        }
+    }
+
+    #block8 .p21:hover~.p23 {
+        animation: transition1 3s linear forwards;
+        position: relative;
+    }
+
+    @keyframes transition1 {
+        0% {
+            top: 0;
+            left: 0;
+        }
+
+        100% {
+            top: -500px;
+            left: 0;
+        }
+    }
+}
+
+@media (max-width:560px) {
+
+    #block8 .p2 {
+        display: block;
+    }
+
+    #block8 .p21:hover+.p22 {
+        animation: transition 3s linear forwards;
+        position: relative;
+    }
+
+
+    @keyframes transition {
+        0% {
+            top: 0;
+            right: 0;
+        }
+
+
+        100% {
+            top: 600px;
+            right: 0;
+        }
+    }
+
+    #block8 .p21:hover~.p23 {
+        animation: transition1 3s linear forwards;
+        position: relative;
+    }
+
+    @keyframes transition1 {
+        0% {
+            top: 0;
+            left: 0;
+        }
+
+        100% {
+            top: -600px;
+            left: 0;
+        }
+    }
+}

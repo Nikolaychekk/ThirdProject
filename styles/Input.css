@@ -1,0 +1,126 @@
+#block3 .group {
+    position: relative;
+    margin: 0 15px 24px;
+}
+
+#block3 input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 250px;
+    border: none;
+    border-bottom: 3px solid #757575;
+}
+
+#block3 input:focus {
+    outline: none;
+}
+
+
+#block3 .label1 {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.8s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+
+#block3 input:focus~.label1,
+#block3 input:valid~.label1 {
+    top: -20px;
+    font-size: 14px;
+    color: #242425;
+    font-weight: bold;
+}
+
+
+#block3 .bar {
+    position: relative;
+    display: block;
+    width: 250px;
+}
+
+#block3 .bar:before,
+#block3 .bar:after {
+    content: '';
+    height: 3px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #242425;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+#block3 .bar:before {
+    left: 50%;
+}
+
+#block3 .bar:after {
+    right: 50%;
+}
+
+
+#block3 input:focus~.bar:before,
+#block3 input:focus~.bar:after {
+    width: 50%;
+}
+
+
+#block3 .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+#block3 input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
